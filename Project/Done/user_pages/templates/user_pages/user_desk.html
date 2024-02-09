@@ -219,16 +219,91 @@
                                             <!-- Добавьте дополнительные пункты чек-листа -->
                                             </div>
 
+                                            <div class="dropdown-checklist-button">
+                                                <button style="margin-left: 1em" class="dropbtn-checklist-button">Добавить пункт</button>
+                                                <div class="dropdown-content-checklist-button">
+                                                    <form class="form" method="post" action="">
+                                                        {% csrf_token %}
+                                                        <input class="input-text" type="text" name = "label-name" id="input-point-name" placeholder="Название">
+                                                        <button class = "type-1" type="submit" name="button">Сохранить</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
                                           </ul>
                                     </div>
                                     <div class="sidebar-content">
                                         <h5>Связанные карточки</h5>
-                                            <a href="">Карточка 1</a>
-                                            <a href="">Карточка 2</a>
+                                            <a style="margin-left: 10px" href="">Карточка 1</a>
+                                            <a style="margin-left: 10px" href="">Карточка 2</a>
+                                            <div class="dropdown-checklist-button">
+                                                    <button class="dropbtn-checklist-button">Привязать карточку</button>
+                                                    <div class="dropdown-content-checklist-button">
+                                                        <form class="form" method="post" action="">
+                                                            {% csrf_token %}
+                                                            <label>
+                                                                <input type="checkbox" name="languages" value="">
+                                                                Название карточки
+                                                            </label>
+                                                            <button class = "type-1" type="submit" name="button">Сохранить</button>
+                                                        </form>
+                                                    </div>
+                                            </div>
                                         <h5>Добавить на карточку</h5>
-                                            <button class="checklist-button">Участники</button>
-                                            <button class="checklist-button">Метки</button>
-                                            <button class="checklist-button">Дедлайн</button>
+                                            <div class="dropdown-checklist-button">
+                                                <button class="dropbtn-checklist-button">Участники</button>
+
+                                                    <div class="dropdown-content-checklist-button">
+                                                    <form class="form" method="post" action="">
+                                                        {% csrf_token %}
+                                                        <label>
+                                                            <input type="checkbox" name="languages" value="">
+                                                            Имя участника (почта участника)
+                                                        </label>
+                                                        <button class = "type-1" type="submit" name="button">Сохранить</button>
+                                                    </form>
+                                                    </div>
+
+                                            </div>
+
+                                            <div class="dropdown-checklist-button">
+                                                <button class="dropbtn-checklist-button">Метки</button>
+                                                <div class="dropdown-content-checklist-button">
+                                                    <form class="form" method="post" action="">
+                                                        {% csrf_token %}
+                                                        <input class="input-text" type="text" name = "label-name" id="input-label-name" placeholder="Название">
+                                                        <label style="display: flex;">Цвет</label>
+                                                        <div class="choose-color">
+                                                           <input style="background-color: #FF0000;" type="radio" id="FF0000" name="color" value="FF0000" class="color-radio" data-color="#FF0000">
+                                                        </div>
+                                                        <button class = "type-1" type="submit" name="button">Сохранить</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown-checklist-button">
+                                                <button class="dropbtn-checklist-button">Дедлайн</button>
+                                                <div class="dropdown-content-checklist-button">
+                                                    <form class="form" method="post" action="">
+                                                        {% csrf_token %}
+                                                        <input type="date" class="form-control w-25" id="input_value3" name="date"><br>
+                                                        <label for="time">Время: </label>
+                                                        <input type="time" id="time" name="time"/>
+                                                        <button class = "type-1" type="submit" name="button">Сохранить</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown-checklist-button">
+                                                    <button class="dropbtn-checklist-button">Чек-лист</button>
+                                                    <div class="dropdown-content-checklist-button">
+                                                        <form class="form" method="post" action="">
+                                                            {% csrf_token %}
+                                                            <input class="input-text" type="text" name = "label-name" id="input-checklist-name" placeholder="Название">
+                                                            <button class = "type-1" type="submit" name="button">Сохранить</button>
+                                                        </form>
+                                                    </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>

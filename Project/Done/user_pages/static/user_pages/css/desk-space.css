@@ -447,7 +447,7 @@ label{
 }
 
 .list-head{
-        display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -517,3 +517,40 @@ label{
         margin-top: 3em;
         margin-bottom: 3em;
       }
+/*-----------------------------------------------------*/
+   .dropbtn-checklist-button{
+    background-color: #0d0d0d10;
+    font-family: 'Nunito';
+    border: 0;
+    border: none;
+    margin-bottom: 1em;
+  }
+
+  .dropdown-checklist-button{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    width: auto;
+  }
+
+  .dropdown-content-checklist-button{
+    display: none;
+    padding: 1em;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .form > *{
+    margin-bottom: 10px;
+  }
+
+  .dropdown-checklist-button:hover .dropdown-content-checklist-button{
+    display: inline-block;
+  }
+
+  .dropdown-checklist-button:hover .dropbtn-checklist-button{
+    background-color: #0d0d0d30;
+  }
